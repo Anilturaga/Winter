@@ -1,1 +1,2 @@
-console.log(localStorage.getItem('lastname'));
+//console.log(localStorage.getItem('lastname'));
+document.getElementById("result").innerHTML = localStorage.getItem("lastname");
