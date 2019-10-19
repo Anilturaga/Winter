@@ -1,1 +1,1 @@
-localStorage.getItem("lastname");
+localStorage.setItem("lastname");
