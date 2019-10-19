@@ -1,1 +1,1 @@
-myFunc(localStorage.getItem("lastname"));
+myFunc(JSON.parse(window.localStorage.getItem('lastname')));
