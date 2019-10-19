@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <script src="https://anilturaga.github.io/Winter/test.js">
+</head>
+    
 <body>
   <h1>Hi</h1>
 <div id="result"></div>
-
+  
 <script>
 // Check browser support
 if (typeof(Storage) !== "undefined") {
@@ -11,11 +15,11 @@ if (typeof(Storage) !== "undefined") {
   localStorage.setItem("lastname", "Smith");
   // Retrieve
   //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-  
+  teja();
 } else {
   document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }
 </script>
-<script src="https://anilturaga.github.io/Winter/test.js">
+
 </body>
 </html>
