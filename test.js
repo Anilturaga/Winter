@@ -1,5 +1,5 @@
 //console.log(localStorage.getItem('lastname'));
 function teja(){
-  localStorage.getItem(1);
+ document.getElementById("result").innerHTML = localStorage.getItem(1);
 }
 
