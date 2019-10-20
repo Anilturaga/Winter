@@ -1,0 +1,516 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel = "shortcut icon" href = "favicon.ico">
+    <title>Team 9 </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <!-- stars -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/price_rangs.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    .copyright_text{
+        color:white;
+    }
+    .single_category_img{
+        display:flex !important;
+        flex-direction: column;
+        margin-bottom: 35px;
+    }
+    a:hover{
+        color: red !important;
+        text-decoration: underline;
+   }
+  @charset "UTF-8";
+:root {
+  --star-size: 30px;
+  --star-color: #fff;
+  --star-background: #fc0;
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+}
+.Stars::before {
+  content: '★★★★★';
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+    </style>
+</head>
+
+<body class="bg-white">
+<!--::header part start::-->
+   <header class="main_menu home_menu">
+      <div class="container-fluid">
+          <div class="row align-items-center justify-content-center">
+              <div class="col-lg-11">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                      <a class="navbar-brand" href="#"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeNL1gwAi1JUsmiDOR2QRbHoyvpuFVOtiHINIOoR3VKVCQkDFO" alt="logo" style="width: 125px;"> </a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse"
+                          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                          aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="menu_icon"><i class="fas fa-bars"></i></span>
+                      </button>
+
+                      <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                          <ul class="navbar-nav">
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Home</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_1"
+                                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Shop
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                      <a class="dropdown-item" href="category.html"> shop category</a>
+                                      <a class="dropdown-item" href="single-product.html">product details</a>
+                                      
+                                  </div>
+                              </li>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_3"
+                                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      pages
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                      <a class="dropdown-item" href="#"> 
+                                          login
+                                          
+                                      </a>
+                                      <a class="dropdown-item" href="#">tracking</a>
+                                      <a class="dropdown-item" href="#">product checkout</a>
+                                      <a class="dropdown-item" href="#">shopping cart</a>
+                                      <a class="dropdown-item" href="#">confirmation</a>
+                                      <a class="dropdown-item" href="#">elements</a>
+                                  </div>
+                              </li>
+                              
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_2"
+                                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      blog
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                      <a class="dropdown-item" href="#"> blog</a>
+                                      <a class="dropdown-item" href="#">Single blog</a>
+                                  </div>
+                              </li>
+                              
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Contact</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="hearer_icon d-flex">
+                          <div class="dropdown cart">
+                              <a class="dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="ti-bag"></i>
+                              </a>
+                              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <div class="single_product">
+  
+                                  </div>
+                              </div> -->
+                          </div>
+                          <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
+                      </div>
+                  </nav>
+              </div>
+          </div>
+      </div>
+      <div class="search_input" id="search_input_box">
+          <div class="container ">
+              <form class="d-flex justify-content-between search-inner">
+                  <input type="text" class="form-control" id="search_input" placeholder="Search Here">
+                  <button type="submit" class="btn"></button>
+                  <span class="ti-close" id="close_search" title="Close Search"></span>
+              </form>
+          </div>
+      </div>
+  </header>
+    <!-- Header part end-->
+    
+
+    <!--================Home Banner Area =================-->
+    <!-- breadcrumb start-->
+    <section class="breadcrumb breadcrumb_bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner">
+                        <div class="breadcrumb_iner_item">
+                            <p>Home / Category</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+
+    <!--================Category Product Area =================-->
+    <section class="cat_product_area section_padding border_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="left_sidebar_area">
+                        <aside class="left_widgets p_filter_widgets sidebar_box_shadow">
+                            <div class="l_w_title">
+                                <h3>Browse Categories</h3>
+                            </div>
+                            <div class="widgets_inner">
+                                <ul class="list">
+                                    <li>
+                                        <a href="#">Laptops</a>
+                                    </li>
+                                    <li class="sub-menu">
+                                        <a href="#Electronics" class=" d-flex justify-content-between">
+                                            Electronics
+                                            <div class="right ti-plus"></div>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="#Electronics">Home Appliances</a>
+                                            </li>
+                                            <li>
+                                                <a href="#Electronics">Smartphones</a>
+                                            </li>
+                                            <li>
+                                                <a href="#Electronics">Kitchen Appliances</a>
+                                            </li>
+                                            <li>
+                                                <a href="#Electronics">Computer Accessories</a>
+                                            </li>
+                                            <li>
+                                                <a href="#Electronics">Meat Alternatives</a>
+                                            </li>
+                                            <li>
+                                                <a href="#Electronics">Appliances</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">KeyBoards</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cooling Pads</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Gamming KeyBoards</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <aside class="left_widgets p_filter_widgets sidebar_box_shadow">
+                            <div class="l_w_title">
+                                <h3>Product filters</h3>
+                            </div>
+                            <div class="widgets_inner">
+                                <ul class="list">
+                                    <p>Brands</p>
+                                     <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Dell</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Apple</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Asus</a>
+                                    </li>
+                                    <li class="active">
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Gionee</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Micromax</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Samsung</a>
+                                    </li>
+                                </ul>
+                                <ul class="list">
+                                    <p>Color</p>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Black</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Black Leather</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Black with red</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Gold</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" aria-label="Radio button for following text input">
+                                        <a href="#">Spacegrey</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <aside class="left_widgets p_filter_widgets price_rangs_aside sidebar_box_shadow">
+                            <div class="l_w_title">
+                                <h3>Price Filter</h3>
+                            </div>
+                            <div class="widgets_inner">
+                                <div class="range_item">
+                                    <!-- <div id="slider-range"></div> -->
+                                    <input type="text" class="js-range-slider" value="" />
+                                    <div class="d-flex align-items-center">
+                                        <div class="price_text">
+                                            <p>Price :</p>
+                                        </div>
+                                        <div class="price_value d-flex justify-content-center">
+                                            <input type="text" class="js-input-from" id="amount" readonly />
+                                            <span>to</span>
+                                            <input type="text" class="js-input-to" id="amount" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="product_top_bar d-flex justify-content-between align-items-center">
+                                <div class="single_product_menu product_bar_item">
+                                    <h2>Gaming Laptops</h2>
+                                </div>
+                                <div class="product_top_bar_iner product_bar_item d-flex">
+                                    <div class="product_bar_single">
+                                        <select class="wide">
+                                            <option data-display="Default sorting">Default sorting</option>
+                                            <option value="1">Some option</option>
+                                            <option value="2">Another option</option>
+                                            <option value="3">Some more options</option>
+                                        </select>
+                                    </div>
+                                    <div class="product_bar_single">
+                                        <select>
+                                            <option data-display="Show 12">Show 12</option>
+                                            <option value="1">Show 20</option>
+                                            <option value="2">Show 30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single_category_product">
+                                <div class="single_category_img">
+                                    <img src="data:image/jpeg;base64,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" alt="">
+                                    
+                                    <div class="category_product_text">
+                                        <a id = "javascr" href="single-product.html">Acer Nitro 5 AN515-52 15.6-inch Laptop (8th Gen Intel Core i5-8300H/8GB/1TB/Windows 10 Home 64-bit/4GB NVIDIA GeForce GTX 1050 Graphics) </a>
+<div class="Stars" style="--rating: 4;" aria-label="Rating of this product is 4.2 out of 5.">                                        
+<p id = "myBtn">$74,999</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_category_product">
+                                <div class="single_category_img">
+                                    <img src="https://m.media-amazon.com/images/I/81odkVAhnkL._AC_UY436_FMwebp_QL65_.jpg" alt="">
+                                
+                                    <div class="category_product_text">
+                                        <a  onclick = "myFunction()" href="single-product2.html">Omen by HP 17-Inch Gaming Laptop, Intel Core i7-8750H Processor, NVIDIA GeForce GTX 1050 Ti 4 GB, 12 GB RAM, 1 TB Hard Drive and 128 GB SSD, Windows 10 Home (17-an110nr, Black)</a><br>
+                                        <div class="Stars" style="--rating: 3.7;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p id = "myBtn">$1,06,418</p>
+                                    </div>
+                                </div>
+                            </div>
+                          <div class="single_category_product">
+                                <div class="single_category_img">
+                                    <img src="https://m.media-amazon.com/images/I/71X63IUQk5L._AC_UY436_FMwebp_QL65_.jpg" alt="">
+                                  
+                                    <div class="category_product_text">
+                                        <a href="single-product3.html">HP Pavilion Gaming Core i5 8th Gen 15.6-inch FHD Gaming Laptop (8GB/128GB SSD + 1TB HDD/Windows 10/NVIDIA GTX 1050Ti 4GB Graphics/Shadow Black/2.17 kg), 15-bc444TX</a><br>
+                                        <div class="Stars" style="--rating: 3.7;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>$69,071</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single_category_product">
+                                <div class="single_category_img">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/61i3kT4-W8L._AC_SL1000_.jpg" alt="">
+                                  
+                                    <div class="category_product_text">
+                                        <a href="dell-product.html">Dell Inspiron 3480 14-inch Thin & Light Laptop (8th Gen Intel Core i5-8265U/8GB/1TB HDD/Window 10 Home + MS Office/Intel UHD Graphics), Silver</a><br>
+                                        <div class="Stars" style="--rating: 3.7;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>₹50,225</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="single_category_product">
+                                <div class="single_category_img">
+                                    <img src="https://m.media-amazon.com/images/I/81Tk4DVC1VL._AC_UY436_FMwebp_QL65_.jpg" alt="">
+                                  
+                                    <div class="category_product_text">
+                                        <a href="single-product4.html">Lenovo Legion Y540 9th Gen Core Intel i7 15.6 inch FHD Gaming Laptop (16GB RAM/1TB HDD + 256 GB SSD/Windows 10 Home/6GB NVIDIA GTX 1660 Ti Graphics/Black/2.3 Kg), 81SX00F0IN</a><br>
+                                        
+                                        <div class="Stars" style="--rating: 4.0;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>$1,55,290</p>
+                                    </div>
+                                </div>
+                            </div>
+                          <div class="single_category_product">
+                                <div class="single_category_img">
+                                    <img src="https://m.media-amazon.com/images/I/81+YepXiJpL._AC_UY436_FMwebp_QL65_.jpg" alt="">
+                                    
+                                    <div class="category_product_text">
+                                        
+                                        <a href="single-product5.html">ASUS TUF Gaming FX505DT 15.6" FHD 120Hz Laptop GTX 1650 4GB Graphics (Ryzen 5-3550H/8GB RAM/512GB PCIe SSD/Windows 10/Stealth Black/2.20 Kg), FX505DT-AL106T</a><br>
+                                        <div class="Stars" style="--rating: 4.0;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>$75,990</p>
+                                    </div>
+                                </div>
+                            </div>
+                       <div class="single_category_product">
+                                <div class="single_category_img">
+                                    <img src="https://m.media-amazon.com/images/I/71VA0n0ZoSL._AC_UY436_FMwebp_QL65_.jpg" alt="">
+                                    
+                                    <div class="category_product_text">
+                                        <a href="single-product6.html">Acer Nitro 7 Intel Core i5-9300H Processor 15.6-inch Thin & Light Gaming 1920 X 1080 Laptop (8GB RAM/ 256GB SSD + 1TB HDD/ Win 10 / 4GB NVIDIA GeForce GTX 1650/Obsidian Black/ 2.5 kgs), AN715-51</a><br>
+                                        <div class="Stars" style="--rating: 4.5;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>$99,999</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <div class="single_category_product">
+                                <div class="single_category_img">
+                                    <img src="data:image/jpeg;base64,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" alt="">
+                                   
+                                    <div class="category_product_text">
+                                        <a href="single-product7.html">MSI Gaming GL65 9SCK-009IN Intel Core i7-9750H 9th Gen 15.6-inch Laptop (8GB/512GB NVMe SSD/Windows 10 Home/GTX 1650, 4GB Graphics/Black/2.3Kg) 9S7-16U412-009</a><br>
+                                        <div class="Stars" style="--rating: 4.4;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>$99,990</p>
+                                    </div>
+                                </div>
+                            </div>
+                         <div class="single_category_product HP">
+                                <div class="single_category_img">
+                                    <img src="https://m.media-amazon.com/images/I/81We5Wnq5AL._AC_UY436_FMwebp_QL65_.jpg" alt="">
+                                   
+                                    <div class="category_product_text">
+                                        <a href="single-product8.html">HP Pavilion 15-dk0045TX 2019 15.6-inch Gaming Laptop (9th Gen Core i5-9300H/8GB/1TB HDD)</a><br>
+                                        <div class="Stars" style="--rating: 4.4;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>$81,857</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="single_category_product">
+                                <div class="single_category_img" style="height: 200px;">
+                                    <img src="data:image/jpeg;base64,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" alt="" style="height: 180px";>
+                                    
+                                    <div class="category_product_text">
+                                        <a href="single-product9.html">MSI Gaming GL63 9SD-1045IN Intel Core i5-9300H 9th Gen 15.6-inch Gaming Laptop (8GB/1TB HDD + 256GB NVMe SSD/Windows 10 Home/GTX 1660 Ti, 6GB Graphics/Black/2.22Kg) 9S7-16P732-1045</a><br>
+                                        <div class="Stars" style="--rating: 3.7;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>1,09,990</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="single_category_product">
+                                <div class="single_category_img" style="height: 180px;">
+                                    <img src="https://m.media-amazon.com/images/I/81GGDlwsIkL._AC_UY436_FMwebp_QL65_.jpg" alt="">
+                                    
+                                    <div class="category_product_text ">
+                                        <a href="single-product10.html">Lenovo Legion Y7000 9th gen Intel Core i5 15.6 inch FHD Gaming Laptop (8GB/1TB HDD+256 GB SSD/Windows 10/NVIDIA GTX 1050 3GB Graphics/Black/2.3Kg), 81V4000LIN</a><br>
+                                        <div class="Stars" style="--rating: 4;" aria-label="Rating of this product is 3.9 out of 5.">                                        
+                                        <p>$92,990</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id = "teja" class="single_category_product"> </div>
+                        <div class="col-lg-12 text-center">
+                            <a href="#" class="btn_2">More Items</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Category Product Area =================-->
+    <!--::footer_part start::-->
+    <footer class="footer_part">
+            <div class="row justify-content-center">
+                    <div class="copyright_text"> This template is made by Team 9 </div>
+            </div>
+        </div>
+    </footer>
+    <!--::footer_part end::-->
+
+    <!-- jquery plugins here-->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/price_rangs.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- slick js -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <script src="collection.js"></script>
+</body>
+</html>
