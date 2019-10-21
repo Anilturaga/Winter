@@ -31,7 +31,7 @@ function teja(){
         }
     }
 
-    document.getElementById("teja").innerHTML = jsons;
+    //document.getElementById("teja").innerHTML = jsons;
     //document.getElementById("teja").innnerHTML = Object.assign({},jsons);
     document.getElementById("teja").innerHTML = JSON.stringify(info);
 }
