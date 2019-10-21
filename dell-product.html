@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="zxx">
 
 <head>
@@ -23,7 +22,7 @@
   <link rel="stylesheet" href="css/magnific-popup.css">
   <!-- style CSS -->
   <link rel="stylesheet" href="css/style.css">
-<style>
+  <style>
   a:hover{
         color: red !important;
         text-decoration: underline;
@@ -34,6 +33,110 @@
 <body class="bg-white">
 <script>
 var count = 11;
+var specifier;
+var firstime = 1;
+var review_start = [];
+var review_end = [];
+var spec_start = [];
+var spec_end = [];
+
+
+function review(){
+   specifier = 1;
+   var d = new Date();
+   var sec = d.getSeconds();
+   var min = d.getMinutes()*60;
+   var total = min + sec;
+   if(firstime == 1)
+    {
+        review_start.push(total);
+     }
+          else
+            { 
+              review_start.push(total);
+              spec_end.push(total);
+            }
+          firstime = firstime + 1;
+}
+
+
+function spec(){
+  specifier = 0;
+  var d = new Date();
+          var sec = d.getSeconds();
+          var min = d.getMinutes()*60;
+          var total = min + sec;
+          if(firstime == 1)
+            {
+              spec_start.push(total);
+            }
+          else
+            {
+              spec_start.push(total);
+              review_end.push(total);
+            }
+          firstime = firstime + 1;
+}
+
+function endTime(){
+          var d = new Date();
+          var count = 10;
+          var sec = d.getSeconds();
+          var min = d.getMinutes()*60;
+          var total = min + sec;
+          if(specifier == 1)
+          {
+            count = count + 1;
+            review_end.push(total); 
+            //localStorage.setItem(count,total);
+          }
+          if(specifier == 0)
+          {
+            count = count + 1;
+            spec_end.push(total);
+            //localStorage.setItem(count,total);
+          }
+}
+function startTime(){
+    var d = new Date();
+          var counts = 20;
+          var sec = d.getSeconds();
+          var min = d.getMinutes()*60;
+          var total = min + sec;
+          if(specifier == 1)
+          {
+            counts = counts + 1;
+            review_start.push(total); 
+            //localStorage.setItem(counts,total);
+          }
+          if(specifier == 0)
+          {
+            counts = counts + 1;
+            spec_start.push(total);
+            //localStorage.setItem(counts,total);
+          }
+}
+/*
+
+if(!!window.IntersectionObserver){
+	let observers = new IntersectionObserver((entries, observer) => { 
+		entries.forEach(entry => {
+		if(entry.isIntersecting){ 
+		    var d = new Date();
+            var sec = d.getSeconds();
+            var min = d.getMinutes()*60;
+            var total = min + sec;
+            spec_end.push(total);
+            review_end.push(total);
+            localStorage.setItem("check",total); 
+		}
+		});
+	}, {rootMargin: "0px 0px -200px 0px"});
+	document.querySelectorAll('.test').forEach(li => { observers.observe(li) });
+}
+else document.querySelector('#warning').style.display = 'block';
+*/
+/*
 function start(){
   var stored = JSON.parse(localStorage.getItem(count));
   var d = new Date();
@@ -43,16 +146,20 @@ function start(){
   stored.push(total);
   localStorage.setItem(count,JSON.stringify(stored));
 }
+*/
+
 function total(){
   var stored = JSON.parse(localStorage.getItem(count));
   var d = new Date();
   var sec = d.getSeconds();
   var min = d.getMinutes()*60;
   var total = min + sec;
-  stored.push(total);
+  stored[9] = total;
   localStorage.setItem(count,JSON.stringify(stored));
 }
+
 function myFunction(){
+  var count = 11;
 var details = [];
 //details.push(a[0].getAttribute("value"));
 details.push(document.getElementById("myBtn").textContent);
@@ -67,20 +174,45 @@ details.push(document.getElementById("processor").textContent);
 localStorage.setItem(count,JSON.stringify(details));
 }
 function end(){
+  //var count = 2;
   //var storedd = JSON.parse(localStorage.getItem(count));
   var old = localStorage.getItem(count);
+  var change = JSON.parse(old);
   var end_time = new Date();
   var secs = end_time.getSeconds();
   var mins = end_time.getMinutes()*60;
   var totals = mins + secs;
-  if(old == null) {
-      old = [];
-    } else {
-      old = JSON.parse(old);
+  if(change[9]!= null)
+  {
+    change[9] = totals - change[9];
+  }
+  var i;
+  var j;
+  var reviewtime = 0;
+  var spectime = 0;
+  for(i=0;i<=review_start.length;i++)
+  {
+    if(review_end[i] != null && review_start[i]!= null)
+    {
+      var temp = (review_end[i] - review_start[i]);
+      reviewtime = reviewtime + temp; 
+      //localStorage.setItem(i+10,reviewtime);
     }
-    localStorage.setItem(count, JSON.stringify(old.concat(totals)));
+  }
+  for(j=0;j<=spec_start.length;j++)
+  {
+    if(spec_end[j] != null && spec_start[j]!= null)
+    {
+      var temp = (spec_end[j] - spec_start[j]);
+      spectime = spectime + temp;
+      //localStorage.setItem(j+10,spectime);
+    }
+  }
+  change[10] = reviewtime;
+  change[11] = spectime;
+    localStorage.setItem(count, JSON.stringify(change));
 }
-</script>  
+</script>   
 
 <!--::header part start::-->
    <header class="main_menu home_menu">
@@ -195,7 +327,7 @@ function end(){
   <!--================Single Product Area =================-->
   <div class="product_image_area section_padding">
     <div class="container">
-      <div class="row s_product_inner">
+      <div onmouseenter = "endTime()" class="row s_product_inner">
         <div class="col-lg-5">
           <div class="product_slider_img">
           
@@ -267,7 +399,7 @@ function end(){
             aria-selected="true">Description</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+          <a onclick = "spec()" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
             aria-selected="false">Specification</a>
         </li>
         <li class="nav-item">
@@ -275,7 +407,7 @@ function end(){
             aria-selected="false">Comments</a>
         </li>
         <li class="nav-item">
-          <a onclick = "start()" class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+          <a onclick = "review()" onclick = "start()" class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
             aria-selected="false">Reviews</a>
         </li>
       </ul>
@@ -488,7 +620,7 @@ function end(){
           </div>
         </div>
         <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
-          <div class="row">
+          <div onmouseenter = "startTime" class="row">
             <div class="col-lg-6">
               <div class="row total_rate">
                 <div class="col-6">
