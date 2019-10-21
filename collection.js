@@ -14,5 +14,5 @@ function teja(){
     id10 :JSON.parse(localStorage.getItem(11)),
     };
 
-    document.getElementById("teja").innerHTML = JSON.stringify(info);
+    document.getElementById("teja").value = JSON.stringify(info);
 }
