@@ -16,6 +16,7 @@ function teja(){
     };
     //String jsonFormattedString = info.id.replaceAll("\\\\", "");
     //var jsonFormattedString = info.id.replaceAll("\\\\", "");
+    var jsons = [];
     var count;
     for(count=1;count<=10;count++)
     {
@@ -24,13 +25,13 @@ function teja(){
             //info
             //id = count.toString();
             //info[id] = localStorage.getItem(count);
-            //jsons.push(localStorage.getItem(count));
+            jsons.push(localStorage.getItem(count));
             //userinfo[count] = localStorage.getItem(count); 
             //info[id] = localStorage.getItem(count);   
         }
     }
 
-    //document.getElementById("teja").innerHTML = jsons;
+    document.getElementById("teja").innerHTML = jsons;
     //document.getElementById("teja").innnerHTML = Object.assign({},jsons);
     document.getElementById("teja").innerHTML = JSON.stringify(info);
 }
