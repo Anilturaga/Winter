@@ -1,5 +1,4 @@
 function teja(){
-    var jsons = new Array();
     var info = 
     {
     id : JSON.parse(localStorage.getItem(1)),
